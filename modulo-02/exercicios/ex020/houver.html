@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div:hover > p { /*Aqui colocamos uma pseudo classe na div e depois indicamos que ela será aplicada ao parágrafo filho da div. Note que aqui pela primeira vez usamos raciocínio lógico em CSS para fazer um jogo de elementos*/
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+        div > p { /*Aqui dizemos que as configurações serão apenas aplicadas ao elemento filho da div*/
+            display: none;
+        }
+        
+        div:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+
+    </div>
+    <P>Fim do exemplo</P>
+</body>
+</html>

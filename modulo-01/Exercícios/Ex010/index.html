@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Trabalhando com links</h1>
+
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar meu <a href="https://www.youtube.com/@Said77Plays" target="_blank" rel="external">canal do youtube</a> e verificar meus diversos vídeos</p><!--Aqui nessa caso por exemplo, colocamos o atriubuto target="_blank" que faz com que o link seja aberto, mas que mantenha o site aberto também. Abre o link em outro aba. O rel="external" está indicando que é um link externo-->
+    <p>Você também poode acessar o meu outro <a href="https://www.youtube.com/@semconhecimento857">canal do youtube</a> sobre curiosidades</p>
+
+    <h1>Usando links internos</h1>
+    <p>Esta é minha primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p> <!--Aqui criamos um hiperlink utilizando um outro arquivo na mesma pasta, uma outra página do nosso site. Detalhe que colocamos o rel"next" que estou dizendo ao navagador que é uma próxima página minha e o target="_self", que estou específicando que é minha própia página, meu próprio link e não um externo (external)-->
+    <p>Você também pode acessar a minha <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p> <!--Aqui fizemos a mesmo coisa que em cima, só que com uma diferença, esse nossa outra página do site pag003, estava em um subpasta da ex010, então o moto de puxar ela é diferente. Tem como utilizar o atalho ctrl+space-->
+    
+    <h1>Links para download</h1>
+
+    <ul>
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="livro/10 - Ligações em toda parte.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.zip" download="livro/10 - Ligações em toda parte.zip" type="application/zip">Livro compactado em ZIP</a></li><!--Aqui meio que ele linkou dois arquivos e colocou um monte de atributo que em si não serve para fazer o download. ideia legal de mesclar em uma lista.-->
+        <!--Para acessar outros tipos  de type="application/..." consultar o site iana.org/assignments/media-types-->
+    </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <style>
+        div{
+            display: inline-block; /*Aqui foi aplicado essa propriedade em todas as divs e deixou elas na mesma linha, sem quebra*/
+            background-color: lightgrey;
+            border: 1px solid black; /*Aqui criamos um shorthand para a propriedade border*/
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+        
+        .c1:hover{ /*Aqui criamos uma Pseudoclasse atrelada a classe c1 criada. Colocamos a função hover, que faz com que a CSS abaixo seja aplicada somente quando passar o mouse por cima*/
+            background-color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1" class="c1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

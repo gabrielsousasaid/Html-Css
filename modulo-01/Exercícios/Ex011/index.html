@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Mídias em HTML 5</h1>
+    
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho  do seu navegador.</p>
+
+    <picture> <!--Aqui criamos uma tag picture para fazermos imagem que se adapta ao tamananho de tela-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"><!--Aqui atribuimos o tamanho máximo de pixels em que a tela vai ser exibida. Muito importante seguir exatamente essa ordem, para que de certo-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio src="midia/musica-feliz.mp3" controls autoplay></audio><!--Aqui o professor criou a maneira mais simples de carregar um áudio. O autoplay não estava funcionando no dele, disse que provavelmente é por problemas de compatibilidade de navegador-->
+    <br>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg"><!--Aqui colocamos várias opções do mesmo áudio só que em tipos diferentes, para aumentar a compatibilidade nos navegadores-->
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    <!--Aqui acima foi uma explosão de novos conceitos aprendidos, por exemplo: abrir a tag picture e a audio igual acima, colocando a tag source dentro, por exemplo, ele le de cima para baixo, como uma condição, por exemplo, se carregar o primeiro audio ou a primeira imagem mais acima, ele não mostrará o resto do conteúdo abaixo-->
+    <!--Dentro da tag audio podemos colocar vários parâmetros. o preload serve para dizer de que forma seu conteúdo será carregado. O autoplay não está funcionando(falha do professor). E o controls é um requisito obrigatório para aparecer os botões de um áudio por exemplo. O loop, faz com que o áudio ao chegar no final, inicie novamente. -->
+</body>
+</html>

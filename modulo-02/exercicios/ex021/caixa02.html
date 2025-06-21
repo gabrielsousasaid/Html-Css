@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:dimgray;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 25px;
+        }
+        nav{
+            background-color: rgb(103, 101, 101);
+            padding: 10px;
+            box-shadow: 3px 3px 5px lightslategrey; /*ShorHand para aplicar sombra na caixa, 1 px - horizontal 2 px - vertical 3 px - espalhamento e depois a cor*/
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+            
+
+
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 25px;
+            border-radius: 10px 0px; /*ShortHand para colocar curva nas bordas*/
+            box-shadow: 6px 12px 12px 0px #0000007a;
+        }
+        article{
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside{
+            background-color: rgb(125, 125, 125);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        #bola{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%; /*Maneira diferente para colocar curva, com valor de %*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esporte Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit est incidunt ipsam similique deserunt adipisci quis illum quod aliquid tenetur ex, suscipit iste doloribus. Iure asperiores illum eum facere. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates itaque ipsa possimus sunt? Magnam officia optio tenetur provident aspernatur voluptatum corporis impedit repudiandae placeat corrupti minus architecto aliquid, quidem distinctio!</p>
+                <aside>
+                    <p>Artigo escrito por José da silva</p>
+                </aside>
+
+            </article>
+            <article>
+
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo curso em vídeo</p>
+    </footer>
+    <div id="bola">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif; /*Aqui temos exemplo de uma safe combination, ele coloca 3 tipos de fontes diferentes para caso a primeira não seja encontrada em algum dispositivo*/ 
+            /*CSS web safe Fonts combinations - w3Schools*/
+
+            /*
+            Medidas Absolutas 
+            cm, mm, in(polegadas), px, pt(ponto), pc(pyca). pt e pc, não recomendável a telas
+    
+
+            Medidas relativas
+            em(É medida através da altura M maíuscula), ex(Medido através da altura x minúscula), rem, vw(porcentagem da largura dos diversos tamanhos de tipo de tela), vh(Altura da viewport), %(porcentagem)
+            16px geralmente = 1em
+            */
+            font-size: 1.5em;
+            font-weight: normal; /*Aqui definimos o peso*/
+            font-style: italic;
+            text-decoration: underline;
+            /*lighter, normal, bold, bolder*/
+            /*Também temos o valor de 100 - 900*/
+        }
+        h1{
+           /* font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            */
+            /*Shorthand font
+        - font-style -> font-weight -> font-size -> font-family
+            */
+            font: italic bolder 4em Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font: bold 2em Arial, Helvetica, sans-serif; /*Aqui por exemplo, pulamos o font-style, que seria o italic acima no caso, do h1, podemos fazer isso, caso não queiramos algum valor. Mas é importante seguir a ordem do Shorthand font para funcionar.*/
+        }
+        /*h1, h2{
+            font-family: 'Times New Roman', Times, serif;  Aqui também aprendemos coisas interessantes, podemos atribuir 2 tags na mesma indentação para configurar as CSS. Poderíamos colocar apenas serif na fonte family, que ele iria buscar alguma fonte serifada para rodar no navegador
+        }*/
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores tenetur rem mollitia eligendi excepturi animi. Odio illum, quae neque voluptatibus consectetur fuga, veritatis, excepturi modi a quidem maiores repellendus non! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro est obcaecati laudantium deserunt sint, modi dolorem ipsam omnis ullam laboriosam saepe fugit, doloremque exercitationem velit explicabo necessitatibus ea culpa in!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia dolor nulla molestias veniam pariatur magni molestiae esse reprehenderit rem. Animi in, consectetur dolore reprehenderit quia minus hic facilis nihil?</p>
+    <h2>Subtítulo do exercíco</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ex enim pariatur quam dignissimos quisquam hic doloremque, magnam ullam accusantium illum adipisci ipsa quos suscipit labore dolorum saepe impedit cupiditate.</p>
+</body>
+</html>

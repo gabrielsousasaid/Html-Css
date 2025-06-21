@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        *{ /* Configurações globais das CSS*/
+            height: 100%;
+        }
+        body{
+            background-image: linear-gradient(to right, #693FBF 50%, #A535B1, #B63492, #E13865, #F9792D);
+            /*Aqui usamos a técnica de degradê para o linear-gradient. No exemplo, está definido para começar a direita(to right, mas poderia ser to bottom, to top, to left e 45deg, por exemplo, que definiria por grau.) Note que colocamos uma porcentagem depois da cor, isso pode definir quantos por centos dessa parte queremos em nosso degradê*/
+            background-attachment: fixed;
+
+            /* background-image: radial-gradient(circle, #693FBF 50%, #A535B1, #B63492, #E13865, #F9792D); -- Nessa exemplo modicamos o valor da atributo para termor um gradiente em circulo*/
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando gradientes</h1>
+</body>
+</html>

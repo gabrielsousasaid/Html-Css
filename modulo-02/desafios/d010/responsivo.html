@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 320px; /*Aqui colocamos uma largura maxima e minina para a nossa caixa Main, fazendo que o conteúdo de texto, background e bordas, fiquem responsivas. Se configurássemos apenas a largura, iria perder a responsividade*/
+            max-width: 800px; 
+            margin: auto;
+        }
+        img{
+            width: 100%; /*Colocamos isso para a imagem não vazar no conteúdo, ocupando 100% da caixa main e diminuindo de acordo com a caixa diminuindo também*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit nostrum facere similique a reiciendis id, nihil dolorem omnis repellat nisi deleniti at hic velit labore aliquam alias, ipsum in. Vitae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magnam sed distinctio accusantium qui itaque esse a, non rem architecto nisi molestiae magni voluptatem blanditiis excepturi! Perspiciatis ex modi harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto, aspernatur quidem in debitis officiis nihil, delectus quod adipisci, similique eveniet tempora at ipsum voluptatibus? Accusantium delectus reiciendis tempore voluptatem.</p>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+            <!--Aqui fizemos aquela técnica que carrega uma imagem menor, quando a tela diminuir. Usamos lógica aqui-->
+
+        </picture>
+
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit nostrum facere similique a reiciendis id, nihil dolorem omnis repellat nisi deleniti at hic velit labore aliquam alias, ipsum in. Vitae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magnam sed distinctio accusantium qui itaque esse a, non rem architecto nisi molestiae magni voluptatem blanditiis excepturi! Perspiciatis ex modi harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto, aspernatur quidem in debitis officiis nihil, delectus quod adipisci, similique eveniet tempora at ipsum voluptatibus? Accusantium delectus reiciendis tempore voluptatem.</p>
+    </main>
+    
+</body>
+</html>

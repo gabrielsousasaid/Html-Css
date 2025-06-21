@@ -1,0 +1,27 @@
+@charset "UTF-8"; /*Aqui criamos uma regra para não ter problemas com acentuações*/
+
+*{/*Aqui definimos configurações globais do CSS*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{/*Criamos um degrade para nosso site*/
+    background-image: linear-gradient(to right, #F28749, #D9583B);
+}
+main{
+    background-color: #ffffff;
+    width: 600px; /*Definimos a largura da nossa tag main*/
+    padding: 10px; /*Criamos uma borda interna*/
+    margin: auto; /*Centralizamos o conteúdo dentro do main*/
+    border-radius: 20px; /*Colocamos borda curvada no background do main*/
+    box-shadow: 5px 5px 15px #7b3222e4; /*Colocamos sompra na box do main*/
+}
+h1{
+    color: #D9583B;
+    text-align: center; /*Ajustamos nosso h1 no centro dentro do main*/
+    text-shadow: 1px 1px 2px #024959; /*Criamos uma sombra no nosso título*/
+}
+h2{
+    color: #024959;
+}
+p{
+    text-align: justify;
+}
