@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body{ /*Aqui tivemos um exemplo mais complexo de como configurar melhor o tamanho e a responsividade da imagem de fundo do seu site, em relação ao conteúdo. Uma observação é que se o conteúdo for muito grande, pode faltar ele em baixo. Uma solução seria colocar o repeat para repetir em baixo.*/
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; 
             height: 100vh;
             background-size: cover; /*Aqui é o mais adaptável, o cover, mas aceita valores como tamanho em px, tamanho auto (Preserva o tamanho origanl da imagem, tamanho em porcentagem (100% e 100% por exemplo, que faz com que a imagem ocupa 100% da caixa em que ela está contida mostrando sempre 100% dela). Também temos o content */
+            background-attachment: fixed;
+
+            /*Exemplo de shorthand para as config de bg image acima:*/
+            background: black url('imagens/wallpaper002.jpg') center center/cover no-repeat fixed;
         }
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
