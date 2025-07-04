@@ -11,15 +11,33 @@
         table{
             border-collapse: collapse;
             width: 400px;
+            position: relative; /*Aqui deixamos a position relative para podermos deixar o cabeçalho fixo. Porém eu tirei e funcionou mesmo assim, professor come bola as vezes*/
         }
         th, td {
             border: 1px solid black;
             text-align: center;
             padding: 10px;
         }
+        caption{
+            border: 1px solid black;
+            background-color: lightgray;
+            padding: 10px;
+            font-weight: bold;
+        }
         thead, tfoot{ /*Aqui aplicamos bg color no cabeçalho da tabela e mudamos a cor da fonte*/
             background-color: gray;
             color: white;
+        }/*Aqui podemos ver que foi utilizado lógica para fazer efeito zebrado com duas cores. As possibilidades são imensas com essa pseudo classe*/
+        thead > tr > th{/*Técnica utilizada para deixar o cabeçalho fixo*/
+            position: sticky;
+            top: 0;/*Colocamos para não ter espaço entre a parte de cima*/
+            background-color: gray;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: rgb(255, 255, 255);
+        }
+        tbody > tr:nth-child(even){ /*Aqui criamo o efeito zebrado atráves de uma pseudo classe. Colocamos o valor 2n, que significa que a cada duas casas da tag tr, será aplicado a bg color. Tem outros valores, exemplo: 2n-1, que faz com que a parte pintada fique no impar da coluna, temos também como definir em odd(que é ímpar) e também em even(que é par)*/ 
+            background-color: lightgray;
         }
         td.number{
             text-align: right;
@@ -31,7 +49,9 @@
 
     <!--
     
-        ANATOMIA PARA TABELAS GRANDES TABLE
+        ANATOMIA PARA TABELAS GRANDES 
+        TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -41,10 +61,11 @@
 
     -->
     <table>
+        <caption>População das unidades federativas</caption> <!--Aqui é a legenda da tabela. Como o tfoot, por exemplo, não depende da ordem que você colocar na tag de tabela e sim a semântica que irá definir-->
         <thead>
             <tr>
-                <th>Estado</th><!--Notado que em th fica em negrito o conteúdo(Usa para os títulos dos dados da tabela. Naturalmente se coloca ao centro da linha)-->
-                <th>População</th>
+                <th scope="col">Estado</th><!--Notado que em th fica em negrito o conteúdo(Usa para os títulos dos dados da tabela. Naturalmente se coloca ao centro da linha)-->
+                <th scope="col" style="width: 50px;">População</th><!--Aqui definimos o Escopo do nosso título da tabela, afirmando que é título de uma coluna-->
             </tr>
         </thead>
         <tbody>
@@ -160,10 +181,19 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th> <!--Aqui definimos que é um título de escopo de linha-->
                 <td class="number"><strong>212 583 750</strong>	</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto neque quia sit veniam sapiente nisi odit possimus rem, eveniet, iste ab ipsum, porro cumque excepturi tempora. Facere, vero facilis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam qui voluptatem molestias, magni, sapiente doloremque quod repellat atque fugiat natus earum cupiditate laborum. Perspiciatis aut quo laudantium sequi quas sed. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex obcaecati temporibus, magni deleniti praesentium, impedit iusto quas enim suscipit quis accusantium magnam minus. Beatae facere deleniti repellat tempore soluta veritatis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ut deserunt velit sed laborum aliquam dolore suscipit cum sapiente quibusdam aspernatur minus, asperiores quia ab eveniet perspiciatis quis, eius hic!</p>
 </body>
 </html>
