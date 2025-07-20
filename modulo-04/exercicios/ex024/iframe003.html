@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframe(navegação no iframe)</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela{
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, eos maxime exercitationem sit, quasi magni quas illum ullam, aut veniam vel. Sunt quidem aspernatur vel labore maiores enim modi atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, iste voluptates ipsam ullam quas explicabo voluptas magnam dicta incidunt debitis sint natus corporis suscipit temporibus labore repellendus tempora aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla esse doloribus unde eum eligendi temporibus id, molestias vero, nam voluptatum iure facilis. Ea perferendis iure perspiciatis accusantium illo? Beatae, reprehenderit.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li><!--Aqui colocamos o target="frame" para que o link seja aberto dentro da janela iframe criada com o atributo name definido com o nome frame. -->
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira Página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quod nobis pariatur facere, tenetur veniam sapiente error recusandae ullam ab ea necessitatibus? Pariatur dolorum, dolorem laborum at debitis beatae sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat corrupti ratione excepturi molestias repudiandae voluptate, modi pariatur saepe, labore non odio natus, vitae vero nulla eum eveniet earum illo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aliquid earum iusto, repudiandae nam voluptatibus sapiente natus ipsam veritatis quod ea expedita perferendis non! Dolores et consectetur ipsum adipisci qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum temporibus, quam impedit accusamus et fugiat laudantium fugit. Accusantium, repellat commodi! Perspiciatis nesciunt facilis aliquid deleniti ducimus ipsa dolorem alias consequuntur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis soluta beatae quam. Iste temporibus nobis ducimus molestias dolores, cupiditate distinctio minus suscipit molestiae autem sed minima repellendus eligendi iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolor alias natus id ipsa. Expedita dolore optio laboriosam cupiditate itaque consequatur nisi fuga assumenda necessitatibus, minima nulla laudantium quod labore?</p>
+
+    <iframe srcdoc="<h1> Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quod nobis pariatur facere, tenetur veniam sapiente error recusandae ullam ab ea necessitatibus? Pariatur dolorum, dolorem laborum at debitis beatae sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat corrupti ratione excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat corrupti ratione excepturi</p> <img src='imagens/logopng.png'>" frameborder="0" id="tela" name="frame"> <!--Aqui colocamos um name para depois podermos abrir o link dentro do iframe. Também aprendemos um novo parametro para o iframe, em vez de carregar algum link nele através do SRC, podemos utlizar o srcdoc, para colocar html em linha, dentro do nosso iframe-->
+        <p>Infelizmente seu navegador não é compatível com isso.</p> <!--Aqui colocamos algum dado no meio da tag iframe. Isso serve para que se o iframe não for carregado, aparece a mensagem que foi colocada entre o fechamento das tags-->
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illo odio esse veritatis non, optio ad sequi distinctio facilis voluptates tempora quidem unde placeat ratione? Eum suscipit dolore magni fuga. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, error laborum! Voluptates sequi nemo pariatur dolorum amet, tenetur illum? A perspiciatis porro tempore? Quae quidem ex recusandae cum sunt minus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ipsa vel voluptatem perspiciatis vero accusantium consectetur officiis perferendis rerum sed, quidem aut magnam eum saepe harum exercitationem optio odio id.</p>
+</body>
+</html>
