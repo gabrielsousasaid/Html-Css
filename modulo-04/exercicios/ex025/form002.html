@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="isu">Usuário:</label>
+            <input type="text" name="usu" id="isu" required minlength="5" maxlength="15" size="10" placeholder="nome do usuário" autocomplete="username">
+        </div>
+        <div>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" size="10" placeholder="sua senha" autocomplete="current-password">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <!--EXPLICAÇÃO DO QUE FOI FEITO:
+    
+    Atributo (required) - Torna obrigatório o preenchemento do campo para envio
+    Atributo (minlength="") - Determina o mínino de caracteres para preencher a caixa
+    Atributo (maxlength="") - Determina o máximo de caracteres para preencher a caixa
+    Atributo (size="") - Determina o tamanho da caixa input
+    Atributo (placeholder="") - Coloca uma dica de preenchimento dentro da caixa input
+    Atributo (autocomplete="", dentro do input)- Quando habilitado o autocomplete na tag form, podemos associar um campo de preenchimento, com um significado para o navegador melhor recomendar os preenchimentos automáticos. Existem várias funcões desse atributo, no exemplo usamos o autocomplete username e o current-password.
+    
+    -->
+</body>
+</html>
