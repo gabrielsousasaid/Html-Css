@@ -11,11 +11,17 @@
     </style>
 </head>
 <body>
+
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p> 
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+
+    <form action="cadastro.php" method="post" autocomplete="off"> <!--Aqui por enquanto colocamos dois atributos, action (Arquivo PHP para mandar as informações de formulários) e o autocomplete (desativa ou ativa a sugestão de preenchimento automático nos campos dos formulários). Por padrão o method de coleta de dados de um formulário é o get, mesmo se você não coloca o atributo. Esse método mostra na URL os dados coletados nos imputs. Para esconder parcialmente isso, precisa utilizar o "post" que esconde parcialmente os dados, porém na devtools, em networking é possível visualizar eles.-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p> <!--todo campo de entrada como esses de texto, precisa ter um name(muito utilizado para o HTML e o PHP).Bom também ter o id (utilizado para javascript e etc). O name é o identificador do Objeto-->
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
+        <!--Importante !! Sempre relacionar uma label ao seu Input, elemento de entrada. Observe que no for, colocamos o id estabelecido no input.-->
     </form>
 </body>
 </html>
+<!--CURIOSIDADES:1- O método get, só suporta dados de até 3 mil bytes, fora disso não funciona 2- Se você fazer uma pesquisa no google e copiar até a parte dos dados enviados na URL, você consegue compartilhar com as pessoas a busca que você fez. Não use get para informações sensíveis e nem para envio de arquivos. O método ideal para todas essas outras coisas são o metodo post-->
+
+<!--DICA: Estudar sobre HTTPS e Criptografias de dados na web-->
