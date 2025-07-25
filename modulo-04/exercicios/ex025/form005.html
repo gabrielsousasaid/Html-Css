@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <div>
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="imas" value="m"> <label for="imas">Masculino</label>
+                <input type="radio" name="sexo" id="ifem" checked value="f"> <label for="ifem">Feminino</label>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Esportes favoritos</legend>
+                <input type="checkbox" name="esbas" id="iesbas" checked> <label for="iesbas">Basquete</label><br>
+                <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label><br>
+                <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label><br>
+                <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label><br>
+            </fieldset>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <!--EXPLICAÇÃO DO QUE FOI FEITO:
+    
+    input type checkbox: Cria caixas que da para selecionar várias outras caixas
+    input type radio: Cria uma caixa, que geralmente está associada a outras caixas com o mesmo nome, para enviar somente 1 dos valores
+
+    Atributo (checked)- Serve para carregar a página com algumas das caixas ja selecionadas(No tipo radio, só da para colocar um check somente, em algum dos campos associados com o mesmo name)
+    
+    OBS: Note que colocamos o atributo value nas tags de input:radio, pois isso faz com que em vez de disparar o valor "on" que seria o "caixa ligada", colocamos o value para enviar o dado que atribuímos naquele campo e não o on. Observe que quando estamos digitando em caixas que não são checkbox ou radio, colocamos dados que nós digitamos, string ou number, isso são os valores a serem enviados, por isso não precisamos configurar nada, mas caso configuremos, por exemplo, a página já irá carregar com o value pré definido nas caixas. 
+    -->
+</body>
+</html>
