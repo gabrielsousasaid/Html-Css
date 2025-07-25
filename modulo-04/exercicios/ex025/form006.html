@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#00ff00"> <!--Ao enviar a cor, envia o valor da cor em Hexadecimal-->
+        </div>
+        <div>
+            <label for="inivel">Nível de satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="0" max="10" value="2">
+        </div>
+        <div>
+            <label for="ifoto">Foto de perfil:</label>
+            <input type="file" name="foto" id="ifoto">
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+     <!--EXPLICAÇÃO DO QUE FOI FEITO:
+    
+    input type color: Cria uma caixa para selecionar uma cor e enviar o valor da cor escolhida em código hexadecimal
+    input type range: Cria uma caixa para selecionar nível de algo, com valor padrão de 0 a 100
+    input type file: Cria uma caixa onde você pode enviar arquivos.
+
+    Atributo (method="post")- foi utilizado no lugar do get, por causa da sua limitação de envio de dados, como colocamos o input file, o usuário pode anexar fotos e os dados são altos, então é necessário utilizar o method="post"
+    Atributo (value="#00ff00") - Utilizada para carregar a página já com uma cor pré definida na tag input color
+    Atributo (min e max) and (value="2") na tag input type range - o min e max, determina em qual valor o nível de seleção inícia e onde ele termina, alterando o valor padrão de 0 a 100. O value 2, deixa que a página carrega o range já pré definida no valor de número 2.
+
+    -->
+</body>
+</html>
