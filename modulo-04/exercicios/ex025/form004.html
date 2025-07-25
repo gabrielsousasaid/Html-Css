@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on"><!--Aplicado o autocomplete-->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </div>
+            <div>
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </div>
+            <div>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx) xxxx-xxxx">
+                <!--Aqui acima em pattern é um atributo para fazermos expressões regulares, no exemplo acima, estamo fazendo uma expressão regular simples para telefones. As expressõe regulares começam com ^ e terminam com $. No exemplo acima, para fazermos as expressões regulares, colocamos eles para lerem dígitos(\d ou [0-9], as duas formas podemos usar. E logo em seguida colocamos a quantidade de dígitos que vai poder ser usado antes do traço(-), por exemplo: \d{4}-\d{4} ). Poderímos também fazer com formato para celular, colocando uma condição  assim: \d{4,5}-\d{4}. Isso significa que antes do traço, vai aceitar no mínimo 4 e também 5 dígitos. Caso também fossemos adicionar um DDD, poderiamos fazer da seguinte forma \(\d{2}\)\d{4,5}-\d{4}-->
+                <!--IMPORTANTE: A todo momento o professor da a entender que a personalização dos tipos de caixas e a validação dos dados inseridos nela, comumente é feito atrvés de PHP ou Javascript-->
+            </div>
+        </fieldset>
+        <!--Estudar mais sobre RegEx(Expressões regulares)-->
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <!--CONCEITO NOVO APRENDIDO !! - FIELDSET (AGRUPAMENTO DE FORMULÁRIO) e o LEGEND (LEGENDA DO AGRUPAMENTO)-->
+</body>
+</html>
