@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="cadastro.php" method="post" autocapitalize="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
 
         <div>
             <label for="iest">Estado</label>
             <select name="estado" id="iest">
-                <option value="" selected>---Escolha---</option>
+                <option value="" selected>---Escolha---</option> <!--Aqui colocamos uma option fora da optgroup, para deixarmos como uma orientação para o usuário clicar na lista e escolher um dos estados do sudeste ou nordeste-->
                 <optgroup label="Região Sudeste">
                     <option value="MG">Minas Gerais</option>
                     <option value="RJ">Rio De Janeiro</option>
@@ -33,7 +33,7 @@
             <datalist id="lstprof">
                 <option >Administrador</option><!--Aqui é um exemplo que funciona sem value também.-->
                 <option value="CONT">Contabilista</option>
-                <option value="DEV">Desenvolvedor</option>
+                <option value="DEV">Desenvolvedor</option> <!--Aqui poderiamos deixar sem value definido, que os dados que iriam aparecer e que seriam enviados eras as strings dentro das tags options.-->
                 <option value="PROF">Professor</option>
             </datalist>
         </div>
@@ -50,13 +50,16 @@
     </form>
     <!--EXPLICAÇÃO DO QUE FOI FEITO:
     
-    tag select: Cria uma caixa para selecionar uma cor e enviar o valor da cor escolhida em código hexadecimal
-    input type range: Cria uma caixa para selecionar nível de algo, com valor padrão de 0 a 100
-    input type file: Cria uma caixa onde você pode enviar arquivos.
+    tag select: Criada para fazer um campo para selecionar valores já pré definidos, como por exemplo no exemplo acima, que criamos uma lista para que seja selecionado um estado do sul e sudeste.
+    tag option: Tag utilizada para colocar entre as tags select e datalist para criar opções para o usuário selecionar e enviar os valores que definimos.
+    tag optgroup: Uma tag que definine um agrupamento de opções com uma label para nós diferenciarmos e classificarmos as opções de uma determinada tag select por exemplo.
+    tag datalist: Utilizada no exemplo acima com um id definido para associarmos a uma input type text por exemplo. Isso cria uma série de opções, sugestões de respostas, atribuidas por nós através das options dentro da tag, para o usuário selecionar. Note que mesmo definindo um datalist, ainda sim o usuário pode digitar uma outra resposta.
+    tag text area: Define um campo de texto para que o usuário digita dados de string para responder algo(Caso coloquemos texto entre os fechamentos da tag, definimos um texto a mostra do usuário já pré definido para envio) 
+    
 
-    Atributo (method="post")- foi utilizado no lugar do get, por causa da sua limitação de envio de dados, como colocamos o input file, o usuário pode anexar fotos e os dados são altos, então é necessário utilizar o method="post"
-    Atributo (value="#00ff00") - Utilizada para carregar a página já com uma cor pré definida na tag input color
-    Atributo (min e max) and (value="2") na tag input type range - o min e max, determina em qual valor o nível de seleção inícia e onde ele termina, alterando o valor padrão de 0 a 100. O value 2, deixa que a página carrega o range já pré definida no valor de número 2.
+    Atributo (selected)- foi utilizado dentro de uma option, para deixar aquela seleção já pré definida ao usuário
+    Atributo (list) - Utilizado na tag input type text para poder vincular a datalist criada com um id a tag input, fazendo assim que aparecem as pré definições a serem preenchidas no campo pelo usuário
+    Atributo (cols e rows) - Utilizado dentro da tag textarea para pré definir o tamanho da caixa de texto.
 
     -->
 </body>
