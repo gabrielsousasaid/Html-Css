@@ -1,3 +1,22 @@
 @charset "UTF-8";
 
 /*Configurações gerais*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh; /*Criou altura e largura definida para a caixa html e body, pois por padrão elas não vem com altura, vai se preenchendo (criando altura e largura)conforme vamos colocando conteúdo dentro delas*/
+    background-color: #233eff;
+    background-size: contain; /*Fez com que a imagem sempre ocupe ela toda na tela*/
+    background-repeat: no-repeat;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 0px #0f196a;
+    padding: 10px;
+}
