@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*Estilo para impressoras*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;/*Por algum motivo ele utilizou esse tipo de fonte, porque vai ser exibido no modo impressora, para relizar a impressão do site. Ele disse que essas fontes monoespaçadas são muito fáceis de serem lidas no papel*/
+    font-size: 1.5em;
+    line-height: 1.5em;
+
+}
+menu{
+    display: none; /*Faz com que o html da tag fique oculto.*/
+}
+article{
+    width: 100%;
+}
+article::after{
+    content: 'Esse artigo foi impresso através do site www.gabrieltcholintcholay.com.br'; /*Utilizada a configuração de pseudo elemento para colocar uma mensagem de onde foi impressoro o artigo no media de impressora*/
+}
