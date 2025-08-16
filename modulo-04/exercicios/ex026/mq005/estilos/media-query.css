@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    span#burguer {
+        display: none;
+    }
+
+    menu{
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block; /*Aqui transformamos em inline block as li, para os itens do menu ficarem um do lado do outro*/
+    }
+
+    main{
+        width: 768px; /*Aqui definimos uma largura fixa para começar ser aplicado a partir de telas maiores, para facilitar na leitura do conteúdo*/
+    }
+}

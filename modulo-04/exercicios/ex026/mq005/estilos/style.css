@@ -18,8 +18,22 @@ header>h1{
     text-align: center;
 }
 
-menu{
+span#burguer{ /*Configuração do botão de hamburguer do google*/
+    background-color: black;
+    color: white;
     display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer; /*Aqui definimos que quando passarmos o mouse em cima do menu, o cursor fique com uma mãozinha*/
+}
+
+span#burguer:hover {
+    background-color: white; /*Aqui configuramos para mudar de cor o bg color e a cor do menu, quando passarmos o mouse*/
+    color: black;
+}
+
+menu{
+    display: none; /*Escondemos o display, para podermos fazer a função dele esconder e aparecer. isso através de script no index*/
 }
 
 menu > ul {
