@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: lightgrey;
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+
+    display: flex; /*Tranformando o pai Header em flexível*/
+    flex-flow: row wrap; /*Transformando os itens em linha e quebrando quando chega no limite. Exemplo, temos o menu e o meu site como itens, aplicando isso, faz com que o menu quebre em baixo do título*/
+    justify-content: space-between; /*Mecheu no posicionamento espaçamento dos itens dentro do pai header(flexbox)*/
+    align-items: center; /*Deixou no centro do eixo transversal(cross axis)*/
+}
+header > h1 {
+    /*border: 1px dotted black;*/
+    flex: 0 0 200px; /*Determinando que os itens do menu, não creça, não encolha e fique fixo em 200px. LEMBRANDO QUE ESSA CONFIGURAÇÃO SE APLICA AOS FILHOS*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.344);
+}
+header > nav {
+    /*border: 1px dotted black;*/
+
+    display: flex; /*Fazendo isso aqui, transformamos o item do container pai Header, em outro container. Agora com os filhos tag a*/
+    flex-flow: row wrap ;
+    justify-content: end; /*Deixamos que o meno sempre fique grudado no final e que quebre no final também*/
+}
+header > nav > a{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header > nav > a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s;
+}
+main{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.323);
+}
