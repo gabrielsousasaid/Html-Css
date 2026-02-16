@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 200px;
+           
+        }
+        #cxA{
+            flex-shrink: 0;
+            flex-grow: 0;/*Aqui são exemplos de combinações com essas configurações no item. Dúvidas consultar o DOC. Importante um dia ficar praticando para entender melhor a proporcionalidade dos direntes valores atribuídos*/
+        }
+        #cxB{
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        #cxC{
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Aqui e o Flex container(O pai)-->
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <img src="" alt="">
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start; /*Posicionamento dos itens no pai*/
+            height: 400px;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20PX;
+        }
+        div#i1{
+            
+        }
+        div#i2{
+            align-self: auto; /*Serve para posicionar os itens separadamente no eixo do cross axis. O auto segue a configuração do container, do pai*/
+        }
+        div#i3{
+            align-self: flex-end;/*Aqui são outras configurações*/
+        }
+        div#i4{
+            
+        }
+        div#i5{
+            align-self: center;
+        }
+        div#i6{
+            
+        }
+        div#i7{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Aqui e o Flex container(O pai)-->
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div> <!--Aqui é o flex itens(O filho)-->
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div> 
+    </div>
+    <img src="" alt="">
+</body>
+</html>

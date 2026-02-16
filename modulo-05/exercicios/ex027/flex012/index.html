@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            
+           
+        }
+        #cxA{
+           /* flex-shrink: 0;
+            flex-grow: 0;
+            flex-basis: 200px;*/
+
+            flex: 1 0 200px; /*Aqui simplificamos as configurações acima, propriedade flex funciona meio como uma shorthand. É recomendação da W3C.*/
+        }
+        #cxB{
+            /*flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 200px;*/
+
+            flex: 1 1 150px;
+        }
+        #cxC{
+            /*flex-shrink: 1;
+            flex-grow: 0;
+            flex-basis: 200px;*/
+
+            flex: 1 8 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"> <!--Aqui e o Flex container(O pai)-->
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <img src="" alt="">
+</body>
+</html>
