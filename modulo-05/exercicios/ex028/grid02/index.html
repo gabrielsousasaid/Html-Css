@@ -8,16 +8,14 @@
         div.container{
             border: 3px solid blue;
             height: 250px;
-            display: grid; /*Tranformamos o container de fora em um grid layout*/
-            grid-template-columns: auto auto auto;/*Deixamos os itens em 3 colunas*/
-            grid-template-rows: auto auto auto;/*Deixamos os itens em 3 linhas*/
-            gap: 5px; /*Deixamos espaçamento de 5 px entre itens. Note que foi descontinuado a forma que está no doc, agora só escreve gap*/
-            align-items: normal; /*Aqui posicionamos os itens do grid na forma vertical*/
-            justify-items: normal;/*Aqui posicionamos os tens do grid na forma horizontal. Lembre-se que é aceito vários valores nessas configurações*/
-            align-content: normal; /*Aqui ajustamos o conteúdo dentro do grid de forma vertical*/
-            justify-content: normal;/*Aqui ajustamos o conteúdo dentro do grid de forma horizontal*/
-
-            /*UMA OBSERVAÇÃO: Na ferramenta de desenvolvedor podemos visualizar e mexer nas propriedades do grid lá temporariamente.(Muito importante para testes e na hora do desenvolvimento)*/
+            display: grid; 
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 5px; 
+            align-items: normal; 
+            justify-items: normal;
+            align-content: normal; 
+            justify-content: normal;
         }
         div.item{
             border: 3px solid red;
