@@ -10,8 +10,7 @@
     grid-column-start: 1;
     grid-column-end: -1;*/
 
-    grid-row: 1/span 1; /*Fazendo isso, simplificamos as declarações acima*/
-    grid-column: 1/span 4;
+    grid-area: 1/1/span 1/span 4;
 }
 
 .caixa2{ /*Feita as configuração para posicionar as caixas dentro da área desejada do grid layout. Dúvidas consultar o DOC*/
@@ -21,8 +20,7 @@
     grid-column-start: 1;
     grid-column-end: 3;*/
 
-    grid-row: 2/span 2;
-    grid-column: 1/span 2;
+    grid-area: 2/1/span 2/span 2; /*Aqui simplificamos mais ainda as propriedades. Dúvidas consultar o DOC. Note que podemos utilizar o span mesclado também*/
 }
 
 .caixa3{
@@ -32,6 +30,5 @@
     grid-column-start: 3;
     grid-column-end: -1;*/
 
-    grid-row: 2/span 2;
-    grid-column: 3/span 2;
+    grid-area: 2/3/span 2/span 2;
 }
